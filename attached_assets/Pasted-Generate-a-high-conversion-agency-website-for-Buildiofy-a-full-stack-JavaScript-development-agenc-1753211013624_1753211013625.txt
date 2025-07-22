@@ -1,0 +1,80 @@
+Generate a high-conversion agency website for 'Buildiofy' (a full-stack JavaScript development agency) with the following specifications:
+
+1. Tech Stack:
+Frontend: React.js (Next.js preferred for SEO)
+
+Styling: Tailwind CSS (clean, professional UI) + Framer Motion for micro-interactions
+
+Backend: Node.js/Express API endpoint for contact forms (optional)
+
+2. Core Pages/Sections:
+- Hero Section:
+
+Headline: "Buildiofy: Scalable JavaScript Solutions for Startups & Enterprises"
+
+Subheadline: *"Full-stack development | React/Node.js | Next.js | 24/7 Support"*
+
+CTA Buttons: "Get Free Audit" (primary), "View Portfolio" (secondary)
+
+Animated gradient background
+
+- Services Section:
+
+3-column cards:
+
+Web App Development (React, Next.js)
+
+API & Backend (Node.js, Express, MongoDB)
+
+UI/UX Optimization (Lighthouse scores >90)
+
+Each card has a "See Case Study →" link
+
+- Portfolio Showcase:
+
+Filterable grid (Web Apps, SaaS, E-commerce)
+
+Each project shows:
+
+Tech stack icons (React/Node/etc.)
+
+Results (e.g., "Improved load time by 65%")
+
+Live demo button
+
+- Client Testimonials:
+
+Video testimonials (placeholder) + quote carousel
+
+Trust badges: "Trusted by YC Startups"
+
+- Contact Section:
+
+Calendly embed for meetings
+
+Simple form (Name, Email, Project Details)
+
+Social links (GitHub, LinkedIn, Twitter)
+
+3. Design Requirements:
+Color Scheme: Dark blue (#0A192F) + electric blue (#00D1FF) accents
+
+Typography: Inter (Google Fonts) – Bold headings, clean body text
+
+Mobile-First: Hamburger menu, stacked cards on mobile
+
+4. Special Features:
+Interactive Tech Stack Animation (floating React/Node.js icons)
+
+Live Chat Widget (Tawk.to or Crisp integration)
+
+Blog Section (optional, for SEO) with dummy post: "Why Next.js Beats CRA in 2024"
+
+5. Deliverables:
+Fully responsive design (tested on Chrome DevTools)
+
+Export as Next.js project (GitHub repo)
+
+1-click Vercel deployment
+
+Note: Prioritize performance (Lighthouse score >90) and include placeholder content for easy customization.

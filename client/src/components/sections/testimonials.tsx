@@ -5,29 +5,29 @@ import { Star, Trophy, Handshake, Play } from "lucide-react";
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "CEO, TechFlow",
+      name: "Rajesh Kumar",
+      role: "Founder, MumbaiEats",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Buildiofy transformed our startup idea into a scalable SaaS platform. Their Next.js expertise helped us achieve 95+ Lighthouse scores and incredible performance."
+      quote: "Buildiofy's ready-made restaurant template got us online in just 3 days! Now we serve 5000+ orders daily with Razorpay integration. Perfect for Indian businesses."
     },
     {
-      name: "Maria Rodriguez",
-      role: "Founder, ShopTech",
+      name: "Priya Sharma",
+      role: "CEO, BangaloreLearn",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "The team's React and Node.js expertise helped us build a robust e-commerce platform that handles thousands of transactions daily. Exceptional quality and support!"
+      quote: "Their multilingual support helped us reach students across Karnataka. The platform handles Hindi, English, and Kannada seamlessly. Excellent understanding of Indian market!"
     },
     {
-      name: "David Kim",
-      role: "CTO, FinanceFlow",
+      name: "Arjun Mehta",
+      role: "Director, DelhiFashion",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      quote: "Buildiofy's full-stack JavaScript solutions scaled our fintech startup from MVP to enterprise. Their 24/7 support and technical expertise are unmatched."
+      quote: "From template to 300% sales growth in 6 months! Buildiofy understood our Indian customer behavior and integrated Paytm, UPI perfectly. Highly recommended!"
     }
   ];
 
   const trustBadges = [
-    { icon: Trophy, text: "Trusted by YC Startups" },
-    { icon: Star, text: "5.0 Client Rating" },
-    { icon: Handshake, text: "100+ Projects Delivered" }
+    { icon: Trophy, text: "Trusted by 500+ Indian Businesses" },
+    { icon: Star, text: "4.9 Client Rating" },
+    { icon: Handshake, text: "300+ Projects Across India" }
   ];
 
   return (
@@ -40,9 +40,9 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">What Our Clients Say</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Success Stories from Indian Businesses</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from the startups and enterprises we've helped grow
+            From small shops to big enterprises - see how we've helped Indian businesses succeed online
           </p>
         </motion.div>
         

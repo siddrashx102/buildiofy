@@ -18,7 +18,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
       {/* Floating Tech Icons */}
       <div className="absolute inset-0 overflow-hidden">
         {techIcons.map((tech, index) => (
@@ -51,7 +51,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Buildiofy: <span className="text-accent">Scalable</span> JavaScript Solutions
+            Buildiofy: <span className="text-accent">Digital</span> Solutions for Indian Businesses
           </motion.h1>
           
           <motion.p 
@@ -60,7 +60,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            for Startups & Enterprises
+            From Mumbai to Bangalore & Beyond
           </motion.p>
           
           <motion.p 
@@ -69,7 +69,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Full-stack development | React/Node.js | Next.js | 24/7 Support
+            Full-stack development | Ready-made Templates | Custom Solutions | India-focused Support
           </motion.p>
           
           <motion.div 
@@ -102,7 +102,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <Shield className="text-accent" size={20} />
-              <span>Trusted by YC Startups</span>
+              <span>Trusted by Indian Startups</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="text-accent" size={20} />

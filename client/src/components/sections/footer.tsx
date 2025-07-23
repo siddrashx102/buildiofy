@@ -14,7 +14,7 @@ export function Footer() {
               <span className="text-xl font-bold text-white">Buildiofy</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Scalable JavaScript solutions for startups and enterprises. We build the future, one line of code at a time.
+              Digital solutions for Indian businesses. From ready-made templates to custom development - we help you succeed online.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors">
@@ -33,10 +33,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-accent transition-colors">Web App Development</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">API & Backend</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">UI/UX Optimization</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Performance Audit</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Ready-Made Templates</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Custom Development</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Payment Integration</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Multi-language Support</a></li>
             </ul>
           </div>
           
@@ -55,10 +55,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li>hello@buildiofy.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>San Francisco, CA</li>
-              <li>24/7 Support</li>
+              <li>hello@buildiofy.in</li>
+              <li>+91 98765 43210</li>
+              <li>Mumbai | Bangalore | Delhi</li>
+              <li>Mon-Sat, 10 AM - 8 PM IST</li>
             </ul>
           </div>
         </div>

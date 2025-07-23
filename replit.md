@@ -7,6 +7,10 @@ This is a modern agency website for Buildiofy, a full-stack JavaScript developme
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Target Market: Indian businesses and customers
+Focus: Ready-made templates alongside custom development
+Navigation: Home section added, clickable logo
+Calendly: Integrated for appointment scheduling
 
 ## System Architecture
 
@@ -35,12 +39,12 @@ The application uses a comprehensive set of pre-built UI components including:
 - Accordion, tabs, and interactive elements
 
 ### Page Sections
-- **Hero Section**: Animated gradient background with floating tech icons and prominent CTAs
-- **Services Section**: Three-column layout showcasing React/Node.js development, API/Backend services, and UI/UX optimization
-- **Portfolio Showcase**: Filterable project grid with case studies and live demos
-- **Testimonials**: Client testimonials with trust badges and social proof
-- **Blog Section**: Latest insights and technical articles
-- **Contact Form**: Lead capture with comprehensive form validation
+- **Hero Section**: Indian business-focused messaging with animated gradient background and floating tech icons
+- **Services Section**: Four-column layout featuring Custom Development, Ready-Made Templates, Backend Services, and Digital Marketing
+- **Portfolio Showcase**: Indian city-based projects (Mumbai, Bangalore, Delhi, Chennai, Pune, Hyderabad) with local market success stories
+- **Testimonials**: Indian business owner testimonials with local market focus and trust badges
+- **Blog Section**: Indian market-specific articles covering payment integration, multilingual support, and local SEO
+- **Contact Form**: INR pricing, IST timing, and Indian contact details with Calendly integration
 
 ### Database Schema (Prepared for Future Use)
 - User table with authentication fields (currently uses in-memory storage)
@@ -98,4 +102,19 @@ The application uses a comprehensive set of pre-built UI components including:
 - Optimized bundle sizes
 - Lighthouse score optimization target >90
 
-The architecture prioritizes developer experience, performance, and maintainability while providing a professional agency website that effectively converts visitors into clients.
+The architecture prioritizes developer experience, performance, and maintainability while providing a professional agency website specifically designed for the Indian market, featuring local payment integrations, multilingual support, and culturally relevant content that effectively converts Indian visitors into clients.
+
+## Recent Changes (January 2025)
+
+### Indian Market Localization
+✓ Updated hero section with "Digital Solutions for Indian Businesses" messaging
+✓ Added "Home" navigation section with clickable logo
+✓ Introduced Ready-Made Templates service for quick deployment
+✓ Updated services to include Indian payment gateway integration (Razorpay, Paytm, UPI)
+✓ Localized portfolio with Indian city-based success stories
+✓ Updated testimonials with Indian business owners and local market references
+✓ Modified pricing from USD to INR with template pricing options
+✓ Added Indian contact details (+91 phone, .in domain, IST timing)
+✓ Integrated Calendly scheduling with Hindi/English support availability
+✓ Updated blog content to focus on Indian market needs (payment integration, multilingual support)
+✓ Added WhatsApp integration for direct customer communication

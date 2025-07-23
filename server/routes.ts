@@ -6,8 +6,13 @@ const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   company: z.string().optional(),
+  phone: z.string().optional(),
   project: z.string().min(1, "Project details are required"),
   budget: z.string().optional(),
+  timeline: z.string().optional(),
+  services: z.array(z.string()).default([]),
+  hearAbout: z.string().optional(),
+  newsletter: z.boolean().default(false),
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {

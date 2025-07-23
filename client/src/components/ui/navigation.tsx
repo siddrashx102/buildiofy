@@ -55,7 +55,7 @@ export function Navigation() {
               onClick={() => scrollToSection('portfolio')} 
               className="text-gray-600 hover:text-primary transition-colors"
             >
-              Portfolio
+              Templates
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')} 
@@ -120,7 +120,7 @@ export function Navigation() {
                 onClick={() => scrollToSection('portfolio')} 
                 className="text-gray-600 hover:text-primary transition-colors text-left"
               >
-                Portfolio
+                Templates
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')} 

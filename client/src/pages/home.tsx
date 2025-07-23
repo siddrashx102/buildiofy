@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
-import { Portfolio } from "@/components/sections/portfolio";
+import { WebTemplates } from "@/components/sections/portfolio";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Blog } from "@/components/sections/blog";
 import { Contact } from "@/components/sections/contact";
@@ -13,7 +13,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Services />
-      <Portfolio />
+      <WebTemplates />
       <Testimonials />
       <Blog />
       <Contact />

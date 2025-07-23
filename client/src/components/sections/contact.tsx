@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Clock, Calendar, Github, Linkedin, Twitter, MessageCircle, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, Calendar, Github, Linkedin, Twitter, Dribbble, MessageCircle } from "lucide-react";
 
 export function Contact() {
   const { toast } = useToast();
@@ -62,9 +62,9 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Go Digital?</h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Build Something Amazing?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From ready-made templates to custom solutions - let's help your Indian business succeed online
+            Let's discuss your project and see how we can help you achieve your goals with scalable JavaScript solutions
           </p>
         </motion.div>
         
@@ -138,11 +138,10 @@ export function Contact() {
                         <SelectValue placeholder="Select budget range" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="50k-2lakh">₹50k - ₹2 Lakh</SelectItem>
-                        <SelectItem value="2lakh-5lakh">₹2 Lakh - ₹5 Lakh</SelectItem>
-                        <SelectItem value="5lakh-10lakh">₹5 Lakh - ₹10 Lakh</SelectItem>
-                        <SelectItem value="10lakh+">₹10 Lakh+</SelectItem>
-                        <SelectItem value="template">Just Template (₹15k-50k)</SelectItem>
+                        <SelectItem value="5k-15k">$5k - $15k</SelectItem>
+                        <SelectItem value="15k-30k">$15k - $30k</SelectItem>
+                        <SelectItem value="30k-50k">$30k - $50k</SelectItem>
+                        <SelectItem value="50k+">$50k+</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -171,33 +170,15 @@ export function Contact() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6">Schedule a Free Consultation</h3>
                 <p className="text-gray-300 mb-6">
-                  Book a 30-minute call to discuss your project and get a custom proposal. Available in Hindi/English.
+                  Book a 30-minute call to discuss your project requirements and get a custom proposal.
                 </p>
                 <div className="bg-white/5 rounded-lg p-6 border border-white/20">
                   <div className="text-center py-8">
                     <Calendar className="text-accent mx-auto mb-4" size={48} />
-                    <h4 className="text-lg font-semibold mb-4">Book Your Free Consultation</h4>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-                        <Clock size={16} />
-                        <span>Available: Mon-Sat, 10 AM - 8 PM IST</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2 text-sm text-gray-300">
-                        <Phone size={16} />
-                        <span>Video/Phone Call Available</span>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      <Button 
-                        onClick={() => window.open('https://calendly.com/buildiofy/consultation', '_blank')}
-                        className="w-full bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                      >
-                        Schedule on Calendly
-                      </Button>
-                      <p className="text-xs text-gray-400">
-                        Or call us directly: +91 98765 43210
-                      </p>
-                    </div>
+                    <p className="text-gray-300 mb-4">Calendly integration will be embedded here</p>
+                    <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                      Schedule Meeting
+                    </Button>
                   </div>
                 </div>
               </CardContent>
@@ -211,19 +192,15 @@ export function Contact() {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <Mail className="text-accent mr-4" size={20} />
-                    <span>hello@buildiofy.in</span>
+                    <span>hello@buildiofy.com</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="text-accent mr-4" size={20} />
-                    <span>+91 98765 43210</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="text-accent mr-4" size={20} />
-                    <span>Mumbai, Bangalore, Delhi</span>
+                    <span>+1 (555) 123-4567</span>
                   </div>
                   <div className="flex items-center">
                     <Clock className="text-accent mr-4" size={20} />
-                    <span>Mon-Sat, 10 AM - 8 PM IST</span>
+                    <span>24/7 Support Available</span>
                   </div>
                 </div>
                 
@@ -240,8 +217,8 @@ export function Contact() {
                     <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
                       <Twitter size={20} />
                     </a>
-                    <a href="https://wa.me/919876543210" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
-                      <MessageCircle size={20} />
+                    <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
+                      <Dribbble size={20} />
                     </a>
                   </div>
                 </div>

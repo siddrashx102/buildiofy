@@ -16,57 +16,57 @@ export function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Mumbai Restaurant Chain",
-      description: "Online ordering system serving 5000+ daily orders",
-      category: "ecommerce",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["Next.js", "Razorpay", "WhatsApp"],
-      gradient: "from-orange-600 to-red-600"
-    },
-    {
-      id: 2,
-      title: "Bangalore EdTech Platform",
-      description: "Scaled to 50k+ students with multilingual support",
+      title: "Analytics SaaS Platform",
+      description: "Improved load time by 65% with Next.js optimization",
       category: "saas",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["React", "Node.js", "AWS Mumbai"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      tags: ["React", "Node.js", "MongoDB"],
       gradient: "from-blue-600 to-purple-600"
     },
     {
-      id: 3,
-      title: "Delhi Fashion Store",
-      description: "Increased online sales by 300% in 6 months",
+      id: 2,
+      title: "Fashion E-commerce Store",
+      description: "Increased conversion rate by 40% with UX optimization",
       category: "ecommerce",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["Templates", "Paytm", "Hindi UI"],
+      tags: ["Next.js", "Stripe", "PostgreSQL"],
       gradient: "from-pink-600 to-rose-600"
     },
     {
-      id: 4,
-      title: "Chennai Healthcare App",
-      description: "Digital patient management for 100+ clinics",
+      id: 3,
+      title: "Team Collaboration Hub",
+      description: "Enhanced team productivity by 80% with real-time features",
       category: "webapp",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["React", "Tamil/English", "SMS API"],
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      tags: ["React", "Socket.io", "Express"],
       gradient: "from-green-600 to-teal-600"
     },
     {
-      id: 5,
-      title: "Pune Logistics Platform",
-      description: "Optimized delivery routes across Maharashtra",
+      id: 4,
+      title: "Project Management SaaS",
+      description: "Reduced project delivery time by 50% with automation",
       category: "saas",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["Next.js", "Maps API", "Marathi"],
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      tags: ["Next.js", "GraphQL", "Prisma"],
       gradient: "from-indigo-600 to-blue-600"
     },
     {
-      id: 6,
-      title: "Hyderabad Real Estate",
-      description: "Property portal with virtual tours & EMI calculator",
+      id: 5,
+      title: "FinTech Trading Platform",
+      description: "Achieved 99.9% uptime with robust architecture",
       category: "webapp",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      tags: ["React", "3D Tours", "Loan APIs"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      tags: ["React", "WebSocket", "Redis"],
       gradient: "from-yellow-600 to-orange-600"
+    },
+    {
+      id: 6,
+      title: "Food Delivery Marketplace",
+      description: "Scaled to 10k+ daily orders with optimized performance",
+      category: "ecommerce",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      tags: ["React Native", "Node.js", "MongoDB"],
+      gradient: "from-red-600 to-pink-600"
     }
   ];
 
@@ -84,9 +84,9 @@ export function Portfolio() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Success Stories Across India</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Our Portfolio</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From Mumbai to Chennai - see how we've helped Indian businesses grow online
+            Discover how we've helped startups and enterprises achieve their goals
           </p>
         </motion.div>
         

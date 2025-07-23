@@ -7,30 +7,30 @@ export function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: "Why Next.js Beats CRA for Indian Businesses",
-      excerpt: "Discover how Next.js helps Indian businesses with better SEO, faster loading times, and improved user experience for customers across India's diverse internet speeds.",
-      date: "Jan 15, 2025",
+      title: "Why Next.js Beats CRA in 2024",
+      excerpt: "Discover the performance advantages, SEO benefits, and developer experience improvements that make Next.js the superior choice for React applications in 2024.",
+      date: "Dec 15, 2024",
       readTime: "5 min read",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["Next.js", "Indian Market", "Performance"]
+      tags: ["Next.js", "React", "Performance"]
     },
     {
       id: 2,
-      title: "Integrating Indian Payment Gateways",
-      excerpt: "Complete guide to integrating Razorpay, Paytm, and UPI in your website. Learn about Indian payment preferences and how to optimize checkout for local customers.",
-      date: "Jan 10, 2025",
+      title: "Building Scalable APIs with Node.js",
+      excerpt: "Learn best practices for creating robust, scalable APIs using Node.js, Express, and modern authentication patterns that can handle enterprise-level traffic.",
+      date: "Dec 10, 2024",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["Razorpay", "UPI", "Indian Payments"]
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      tags: ["Node.js", "Express", "API"]
     },
     {
       id: 3,
-      title: "Building Multilingual Websites for India",
-      excerpt: "Best practices for creating websites that support Hindi, regional languages, and English. Learn about fonts, RTL support, and cultural considerations.",
-      date: "Jan 5, 2025",
+      title: "Achieving Lighthouse Score 100",
+      excerpt: "A comprehensive guide to optimizing web applications for maximum Lighthouse scores, covering performance, accessibility, best practices, and SEO.",
+      date: "Dec 5, 2024",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["Multilingual", "Hindi", "Localization"]
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      tags: ["Performance", "Lighthouse", "SEO"]
     }
   ];
 
@@ -44,9 +44,9 @@ export function Blog() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Insights for Indian Businesses</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Latest Insights</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn about web development, payment integration, and digital marketing specifically for the Indian market
+            Stay updated with the latest trends in JavaScript development and best practices
           </p>
         </motion.div>
         

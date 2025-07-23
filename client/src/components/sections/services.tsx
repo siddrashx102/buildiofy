@@ -6,30 +6,23 @@ export function Services() {
   const services = [
     {
       icon: "⚛️",
-      title: "Custom Web Development",
-      description: "Tailored React and Next.js applications designed specifically for Indian businesses with local market understanding.",
-      features: ["React & Next.js", "Multi-language Support", "Indian Payment Gateways"],
+      title: "Web App Development",
+      description: "Modern React and Next.js applications with server-side rendering, optimized performance, and seamless user experiences.",
+      features: ["React & Next.js", "TypeScript Integration", "Progressive Web Apps"],
       gradient: "from-blue-500 to-purple-600"
     },
     {
-      icon: "🎨",
-      title: "Ready-Made Templates",
-      description: "Business-ready website templates optimized for Indian markets - restaurants, retail, services, and e-commerce solutions.",
-      features: ["100+ Indian Templates", "Quick Setup (2-3 days)", "Local Business Focus"],
-      gradient: "from-pink-500 to-rose-600"
-    },
-    {
       icon: "🟢",
-      title: "Backend & API Services",
-      description: "Scalable Node.js backends with Indian payment integrations, SMS services, and cloud infrastructure optimized for Indian users.",
-      features: ["Razorpay/Paytm Integration", "WhatsApp Business API", "AWS Mumbai Region"],
+      title: "API & Backend",
+      description: "Robust Node.js APIs with Express, MongoDB integration, authentication systems, and scalable cloud architecture.",
+      features: ["Node.js & Express", "MongoDB & PostgreSQL", "API Security & Auth"],
       gradient: "from-green-500 to-teal-600"
     },
     {
       icon: "⚡",
-      title: "Digital Marketing Setup",
-      description: "Complete digital presence setup including SEO optimization, Google My Business, and social media integration for Indian markets.",
-      features: ["Local SEO Optimization", "Hindi/Regional Content", "Social Media Integration"],
+      title: "UI/UX Optimization",
+      description: "Performance optimization, accessibility improvements, and user experience enhancements to achieve Lighthouse scores >90.",
+      features: ["Lighthouse Score >90", "WCAG Compliance", "Core Web Vitals"],
       gradient: "from-orange-500 to-red-600"
     }
   ];
@@ -44,13 +37,13 @@ export function Services() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Services for Indian Businesses</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Our Services</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From ready-made templates to custom solutions - we help Indian businesses succeed online
+            We deliver end-to-end JavaScript solutions that scale with your business
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

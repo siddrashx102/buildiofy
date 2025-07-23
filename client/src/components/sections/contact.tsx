@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,7 +7,155 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Clock, Github, Linkedin, Twitter, MessageCircle, Send, MapPin, Users } from "lucide-react";
+import { Mail, Phone, Clock, Github, Linkedin, Twitter, MessageCircle, Send, MapPin, Users, X, Minimize2 } from "lucide-react";
+
+// Chat Widget Component
+function ChatWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [message, setMessage] = useState("");
+  const [chatMessages, setChatMessages] = useState([
+    {
+      id: 1,
+      text: "Hi! I'm here to help you with any questions about our services. How can I assist you today?",
+      sender: "support",
+      timestamp: new Date()
+    }
+  ]);
+
+  useEffect(() => {
+    // Auto-open chat after 3 seconds
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSendMessage = () => {
+    if (message.trim()) {
+      setChatMessages(prev => [...prev, {
+        id: prev.length + 1,
+        text: message,
+        sender: "user",
+        timestamp: new Date()
+      }]);
+      setMessage("");
+      
+      // Auto-response after a short delay
+      setTimeout(() => {
+        setChatMessages(prev => [...prev, {
+          id: prev.length + 1,
+          text: "Thanks for your message! I'll connect you with our team right away. You can also fill out our contact form for a detailed response.",
+          sender: "support",
+          timestamp: new Date()
+        }]);
+      }, 1500);
+    }
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      <AnimatePresence>
+        {isOpen && !isMinimized && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            className="mb-4 w-80 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col"
+          >
+            {/* Chat Header */}
+            <div className="bg-accent text-white p-4 rounded-t-lg flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="font-medium">Support Chat</span>
+              </div>
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setIsMinimized(true)}
+                  className="hover:bg-white/10 p-1 rounded"
+                >
+                  <Minimize2 size={16} />
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="hover:bg-white/10 p-1 rounded"
+                >
+                  <X size={16} />
+                </button>
+              </div>
+            </div>
+
+            {/* Chat Messages */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-3">
+              {chatMessages.map((msg) => (
+                <div
+                  key={msg.id}
+                  className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                >
+                  <div
+                    className={`max-w-xs px-3 py-2 rounded-lg text-sm ${
+                      msg.sender === 'user'
+                        ? 'bg-accent text-white'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100'
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Chat Input */}
+            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex space-x-2">
+                <Input
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Type your message..."
+                  className="flex-1 text-sm"
+                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                />
+                <Button
+                  onClick={handleSendMessage}
+                  size="sm"
+                  className="bg-accent hover:bg-accent/90"
+                >
+                  <Send size={16} />
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Chat Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2, duration: 0.5 }}
+      >
+        <Button
+          onClick={() => {
+            if (isMinimized) {
+              setIsMinimized(false);
+            } else {
+              setIsOpen(!isOpen);
+            }
+          }}
+          className="w-16 h-16 bg-accent hover:bg-accent/90 rounded-full shadow-lg flex items-center justify-center text-white transition-all transform hover:scale-110 relative"
+        >
+          <MessageCircle size={24} />
+          {!isOpen && (
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+              <span className="text-xs text-white">1</span>
+            </div>
+          )}
+        </Button>
+      </motion.div>
+    </div>
+  );
+}
 
 export function Contact() {
   const { toast } = useToast();
@@ -437,16 +585,7 @@ export function Contact() {
       </div>
       
       {/* Live Chat Widget */}
-      <motion.div 
-        className="fixed bottom-6 right-6 z-50"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
-      >
-        <Button className="w-16 h-16 bg-accent hover:bg-accent/90 rounded-full shadow-lg flex items-center justify-center text-white transition-all transform hover:scale-110">
-          <MessageCircle size={24} />
-        </Button>
-      </motion.div>
+      <ChatWidget />
     </section>
   );
 }

@@ -11,9 +11,13 @@ export function Navigation() {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -23,15 +27,24 @@ export function Navigation() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <button 
+            onClick={() => scrollToSection('home')} 
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
               <Code className="text-white" size={16} />
             </div>
             <span className="text-xl font-bold text-primary">Buildiofy</span>
-          </Link>
+          </button>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('home')} 
+              className="text-gray-600 hover:text-primary transition-colors"
+            >
+              Home
+            </button>
             <button 
               onClick={() => scrollToSection('services')} 
               className="text-gray-600 hover:text-primary transition-colors"
@@ -91,6 +104,12 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 pt-4">
+              <button 
+                onClick={() => scrollToSection('home')} 
+                className="text-gray-600 hover:text-primary transition-colors text-left"
+              >
+                Home
+              </button>
               <button 
                 onClick={() => scrollToSection('services')} 
                 className="text-gray-600 hover:text-primary transition-colors text-left"

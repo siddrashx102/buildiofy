@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Clock, Calendar, Github, Linkedin, Twitter, Dribbble, MessageCircle } from "lucide-react";
+import { Mail, Phone, Clock, Calendar, Github, Linkedin, Twitter, MessageCircle } from "lucide-react";
 
 export function Contact() {
   const { toast } = useToast();
@@ -17,6 +17,18 @@ export function Contact() {
     project: "",
     budget: ""
   });
+
+  useEffect(() => {
+    // Initialize Calendly widget when component mounts
+    if (window.Calendly) {
+      window.Calendly.initInlineWidget({
+        url: 'https://calendly.com/buildiofy/consultation',
+        parentElement: document.querySelector('.calendly-inline-widget'),
+        prefill: {},
+        utm: {}
+      });
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -173,12 +185,25 @@ export function Contact() {
                   Book a 30-minute call to discuss your project requirements and get a custom proposal.
                 </p>
                 <div className="bg-white/5 rounded-lg p-6 border border-white/20">
-                  <div className="text-center py-8">
-                    <Calendar className="text-accent mx-auto mb-4" size={48} />
-                    <p className="text-gray-300 mb-4">Calendly integration will be embedded here</p>
-                    <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                      Schedule Meeting
-                    </Button>
+                  {/* Calendly Inline Widget */}
+                  <div 
+                    className="calendly-inline-widget" 
+                    data-url="https://calendly.com/buildiofy/consultation"
+                    style={{ minWidth: '320px', height: '400px' }}
+                  >
+                    {/* Fallback content while Calendly loads */}
+                    <div className="text-center py-8">
+                      <Calendar className="text-accent mx-auto mb-4" size={48} />
+                      <p className="text-gray-300 mb-4">Loading calendar...</p>
+                      <a 
+                        href="https://calendly.com/buildiofy/consultation" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                      >
+                        Schedule Meeting
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -218,7 +243,7 @@ export function Contact() {
                       <Twitter size={20} />
                     </a>
                     <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors">
-                      <Dribbble size={20} />
+                      <MessageCircle size={20} />
                     </a>
                   </div>
                 </div>

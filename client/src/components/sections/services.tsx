@@ -19,6 +19,13 @@ export function Services() {
       gradient: "from-green-500 to-teal-600"
     },
     {
+      icon: "🎨",
+      title: "Ready-Made Templates",
+      description: "Business-ready website templates built with modern technologies. Get your website live in days, not months.",
+      features: ["Business Templates", "E-commerce Ready", "Customizable Design"],
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
       icon: "⚡",
       title: "UI/UX Optimization",
       description: "Performance optimization, accessibility improvements, and user experience enhancements to achieve Lighthouse scores >90.",
@@ -43,7 +50,7 @@ export function Services() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

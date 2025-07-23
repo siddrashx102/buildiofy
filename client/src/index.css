@@ -4,53 +4,55 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(213, 75%, 15%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(213, 75%, 15%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(213, 75%, 15%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --primary: hsl(213, 75%, 15%);
-  --primary-foreground: hsl(0, 0%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(213, 75%, 15%);
-  --accent: hsl(191, 100%, 52%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(213, 75%, 15%);
-  --radius: 0.75rem;
+  /* Dark minimalistic theme as default */
+  --background: hsl(220, 15%, 8%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(220, 15%, 12%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(220, 15%, 10%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --card: hsl(220, 15%, 10%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --border: hsl(220, 15%, 18%);
+  --input: hsl(220, 15%, 12%);
+  --primary: hsl(220, 15%, 8%);
+  --primary-foreground: hsl(0, 0%, 95%);
+  --secondary: hsl(220, 15%, 12%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --accent: hsl(142, 76%, 55%);
+  --accent-foreground: hsl(220, 15%, 8%);
+  --destructive: hsl(0, 70%, 55%);
+  --destructive-foreground: hsl(0, 0%, 95%);
+  --ring: hsl(142, 76%, 55%);
+  --radius: 0.5rem;
   
-  /* Custom Buildiofy colors */
-  --buildiofy-primary: hsl(213, 75%, 15%);
-  --buildiofy-accent: hsl(191, 100%, 52%);
-  --buildiofy-gray: hsl(215, 16%, 47%);
+  /* Custom theme colors */
+  --buildiofy-primary: hsl(220, 15%, 8%);
+  --buildiofy-accent: hsl(142, 76%, 55%);
+  --buildiofy-gray: hsl(0, 0%, 60%);
 }
 
 .dark {
-  --background: hsl(213, 75%, 15%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(213, 75%, 15%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(213, 75%, 15%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --primary: hsl(191, 100%, 52%);
-  --primary-foreground: hsl(213, 75%, 15%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(191, 100%, 52%);
-  --accent-foreground: hsl(213, 75%, 15%);
-  --destructive: hsl(0, 63%, 31%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(212, 72%, 59%);
+  /* Same as root for consistent dark theme */
+  --background: hsl(220, 15%, 8%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(220, 15%, 12%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(220, 15%, 10%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --card: hsl(220, 15%, 10%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --border: hsl(220, 15%, 18%);
+  --input: hsl(220, 15%, 12%);
+  --primary: hsl(220, 15%, 8%);
+  --primary-foreground: hsl(0, 0%, 95%);
+  --secondary: hsl(220, 15%, 12%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --accent: hsl(142, 76%, 55%);
+  --accent-foreground: hsl(220, 15%, 8%);
+  --destructive: hsl(0, 70%, 55%);
+  --destructive-foreground: hsl(0, 0%, 95%);
+  --ring: hsl(142, 76%, 55%);
 }
 
 @layer base {

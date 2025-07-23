@@ -16,11 +16,18 @@ function Router() {
 }
 
 function App() {
+  // Apply dark theme by default
+  if (typeof document !== 'undefined') {
+    document.documentElement.classList.add('dark');
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Router />
+        <div className="min-h-screen bg-background text-foreground">
+          <Toaster />
+          <Router />
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );

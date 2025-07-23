@@ -1,12 +1,24 @@
-# Buildiofy Agency Website
+# Buildiofy Admin Templates Website
 
 ## Overview
 
-This is a modern agency website for Buildiofy, a full-stack JavaScript development agency. The project is built with React/TypeScript on the frontend and Express.js on the backend, designed to showcase services, portfolio, and capture client inquiries through a contact form.
+This is a modern admin templates showcase website for Buildiofy, featuring production-ready dashboard templates and admin interfaces. The project is built with React/TypeScript on the frontend and Express.js on the backend, designed with a minimalistic dark theme to showcase premium admin templates, handle client inquiries, and provide template browsing functionality.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Changes (January 2025)
+
+- **Complete redesign**: Shifted focus from general web development agency to specialized admin templates and dashboards
+- **Dark minimalistic theme**: Implemented comprehensive dark mode design system with subtle accents
+- **Hero section update**: Changed messaging to "Scalable Admin Templates for the Modern Web"
+- **Services redesign**: Updated to showcase Admin Dashboard Templates, E-commerce Admin Panels, Analytics Dashboards, and SaaS Admin Templates
+- **Portfolio transformation**: Replaced general web templates with admin-focused templates (dashboards, analytics, CRM, finance, etc.)
+- **Contact form enhancement**: Removed Calendly integration, added comprehensive form fields for template inquiries
+- **Testimonials update**: Updated client testimonials to reflect admin template focus
+- **Blog content**: Updated articles to focus on admin dashboard design trends and best practices
+- **Color scheme**: Switched to dark theme with green accent (#4ade80) for professional admin interface look
 
 ## System Architecture
 

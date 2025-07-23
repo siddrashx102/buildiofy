@@ -10,32 +10,11 @@ export function Hero() {
     }
   };
 
-  const techIcons = [
-    { icon: "⚛️", delay: 0, position: "top-20 left-10" },
-    { icon: "🟢", delay: 1, position: "top-40 right-20" },
-    { icon: "📦", delay: 2, position: "bottom-40 left-20" },
-    { icon: "🚀", delay: 3, position: "bottom-20 right-10" },
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
-      {/* Floating Tech Icons */}
-      <div className="absolute inset-0 overflow-hidden">
-        {techIcons.map((tech, index) => (
-          <motion.div
-            key={index}
-            className={`absolute ${tech.position} text-4xl tech-icon`}
-            animate={{ y: [0, -20, 0] }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              delay: tech.delay,
-              ease: "easeInOut"
-            }}
-          >
-            <span className="text-white/20">{tech.icon}</span>
-          </motion.div>
-        ))}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full bg-[radial-gradient(circle_at_1px_1px,_rgb(255,255,255)_1px,_transparent_0)] bg-[length:40px_40px]"></div>
       </div>
       
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
@@ -46,71 +25,63 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-light text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Buildiofy: <span className="text-accent">Scalable</span> JavaScript Solutions
+            <span className="text-accent font-medium">Scalable Admin Templates</span><br />
+            for the Modern Web
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-4 font-medium"
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto font-light"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            for Startups & Enterprises
+            Production-ready & easy to use web themes and templates for Reliability and Customizability.
           </motion.p>
           
-          <motion.p 
-            className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto"
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Full-stack development | React/Node.js | Next.js | 24/7 Support
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
-            >
-              Get Free Audit
-            </Button>
             <Button 
               onClick={() => scrollToSection('portfolio')}
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 bg-transparent"
+              className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-md font-medium text-base transition-all duration-200 shadow-sm"
             >
-              View Templates
+              Browse Templates
+            </Button>
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              variant="outline"
+              className="border border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3 rounded-md font-medium text-base transition-all duration-200 bg-transparent"
+            >
+              Get Started
             </Button>
           </motion.div>
           
           {/* Trust Indicators */}
           <motion.div 
-            className="mt-12 flex flex-wrap justify-center items-center gap-8 text-gray-400"
+            className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-500 text-sm"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <div className="flex items-center gap-2">
-              <Shield className="text-accent" size={20} />
-              <span>Trusted by YC Startups</span>
+              <Shield className="text-accent" size={16} />
+              <span>Production Ready</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="text-accent" size={20} />
-              <span>24/7 Support</span>
+              <Clock className="text-accent" size={16} />
+              <span>Modern Stack</span>
             </div>
             <div className="flex items-center gap-2">
-              <Rocket className="text-accent" size={20} />
-              <span>Lighthouse {'>'} 90</span>
+              <Rocket className="text-accent" size={16} />
+              <span>Highly Customizable</span>
             </div>
           </motion.div>
         </motion.div>

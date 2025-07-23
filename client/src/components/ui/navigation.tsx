@@ -23,55 +23,55 @@ export function Navigation() {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed w-full top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('home')} 
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-              <Code className="text-white" size={16} />
+            <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
+              <Code className="text-accent-foreground" size={16} />
             </div>
-            <span className="text-xl font-bold text-primary">Buildiofy</span>
+            <span className="text-xl font-medium text-foreground">Buildiofy</span>
           </button>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('home')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               Templates
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('blog')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               Blog
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
-              className="text-gray-600 hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
               Contact
             </button>
@@ -81,9 +81,9 @@ export function Navigation() {
           <div className="hidden md:block">
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-105"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded-md font-medium text-sm transition-colors"
             >
-              Get Free Audit
+              Get Started
             </Button>
           </div>
           
@@ -93,58 +93,58 @@ export function Navigation() {
             onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? (
-              <X className="text-gray-600" size={24} />
+              <X className="text-muted-foreground" size={24} />
             ) : (
-              <Menu className="text-gray-600" size={24} />
+              <Menu className="text-muted-foreground" size={24} />
             )}
           </button>
         </div>
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               <button 
                 onClick={() => scrollToSection('home')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('services')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Templates
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('blog')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Blog
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 
-                className="text-gray-600 hover:text-primary transition-colors text-left"
+                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Contact
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold w-full"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-3 rounded-md font-medium w-full mt-2"
               >
-                Get Free Audit
+                Get Started
               </Button>
             </div>
           </div>

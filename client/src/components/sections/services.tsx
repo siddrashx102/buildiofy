@@ -5,37 +5,37 @@ import { ArrowRight, Check } from "lucide-react";
 export function Services() {
   const services = [
     {
-      icon: "⚛️",
-      title: "Web App Development",
-      description: "Modern React and Next.js applications with server-side rendering, optimized performance, and seamless user experiences.",
-      features: ["React & Next.js", "TypeScript Integration", "Progressive Web Apps"],
+      icon: "📊",
+      title: "Admin Dashboard Templates",
+      description: "Modern, responsive admin dashboards with complete user management, analytics, and data visualization components.",
+      features: ["User Management", "Data Visualization", "Responsive Design"],
       gradient: "from-blue-500 to-purple-600"
     },
     {
-      icon: "🟢",
-      title: "API & Backend",
-      description: "Robust Node.js APIs with Express, MongoDB integration, authentication systems, and scalable cloud architecture.",
-      features: ["Node.js & Express", "MongoDB & PostgreSQL", "API Security & Auth"],
+      icon: "🎨",
+      title: "E-commerce Admin Panels",
+      description: "Comprehensive e-commerce management systems with inventory, orders, payments, and customer management features.",
+      features: ["Order Management", "Inventory Tracking", "Payment Integration"],
       gradient: "from-green-500 to-teal-600"
     },
     {
-      icon: "🎨",
-      title: "Ready-Made Templates",
-      description: "Business-ready website templates built with modern technologies. Get your website live in days, not months.",
-      features: ["Business Templates", "E-commerce Ready", "Customizable Design"],
+      icon: "📈",
+      title: "Analytics Dashboards",
+      description: "Professional analytics and reporting templates with charts, metrics, and data export capabilities.",
+      features: ["Real-time Charts", "Export Reports", "Custom Metrics"],
       gradient: "from-purple-500 to-pink-600"
     },
     {
       icon: "⚡",
-      title: "UI/UX Optimization",
-      description: "Performance optimization, accessibility improvements, and user experience enhancements to achieve Lighthouse scores >90.",
-      features: ["Lighthouse Score >90", "WCAG Compliance", "Core Web Vitals"],
+      title: "SaaS Admin Templates",
+      description: "Complete SaaS platform templates with subscription management, billing, and multi-tenant architecture.",
+      features: ["Subscription Billing", "Multi-tenant Support", "API Integration"],
       gradient: "from-orange-500 to-red-600"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -44,9 +44,11 @@ export function Services() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We deliver end-to-end JavaScript solutions that scale with your business
+          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+            Premium <span className="text-accent font-medium">Admin Templates</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light">
+            Production-ready dashboard templates designed for modern web applications. Built with the latest technologies and best practices.
           </p>
         </motion.div>
         
@@ -59,26 +61,26 @@ export function Services() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-6`}>
-                    <span className="text-white text-2xl">{service.icon}</span>
+              <Card className="h-full bg-card rounded-lg border border-border hover:border-accent/20 transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-accent text-xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-medium text-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
                     {service.description}
                   </p>
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
-                        <Check className="text-accent mr-2" size={16} />
+                      <li key={featureIndex} className="flex items-center text-muted-foreground text-sm">
+                        <Check className="text-accent mr-2" size={14} />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <button className="text-accent font-semibold hover:underline flex items-center group">
-                    See Case Study 
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  <button className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
+                    View Template
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={14} />
                   </button>
                 </CardContent>
               </Card>

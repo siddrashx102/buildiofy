@@ -34,12 +34,12 @@ export function Navigation() {
           >
             <div className="flex items-center space-x-2">
               {/* Logo Icon */}
-              <div className="w-8 h-8 rounded-md border-2 border-purple-500 flex items-center justify-center bg-purple-500/10">
+              <div className="w-8 h-8 rounded-md border-2 border-accent flex items-center justify-center bg-accent/10">
                 <div className="grid grid-cols-2 gap-0.5">
-                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-sm"></div>
-                  <div className="w-1.5 h-1.5 bg-purple-400 rounded-sm"></div>
-                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-sm"></div>
-                  <div className="w-1.5 h-1.5 bg-purple-500 rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-accent rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-accent/70 rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-accent rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-accent rounded-sm"></div>
                 </div>
               </div>
               {/* Logo Text */}

@@ -130,10 +130,7 @@ export default function BlogPage() {
                         </span>
                       ))}
                     </div>
-                    <Link href={`/blog/${post.id}`} className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
-                      Read More 
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={14} />
-                    </Link>
+
                   </CardContent>
                 </Card>
               </motion.article>

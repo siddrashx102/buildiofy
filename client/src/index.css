@@ -19,16 +19,16 @@
   --primary-foreground: hsl(0, 0%, 95%);
   --secondary: hsl(220, 15%, 12%);
   --secondary-foreground: hsl(0, 0%, 95%);
-  --accent: hsl(142, 76%, 55%);
-  --accent-foreground: hsl(220, 15%, 8%);
+  --accent: hsl(270, 91%, 65%);
+  --accent-foreground: hsl(0, 0%, 95%);
   --destructive: hsl(0, 70%, 55%);
   --destructive-foreground: hsl(0, 0%, 95%);
-  --ring: hsl(142, 76%, 55%);
+  --ring: hsl(270, 91%, 65%);
   --radius: 0.5rem;
   
   /* Custom theme colors */
   --buildiofy-primary: hsl(220, 15%, 8%);
-  --buildiofy-accent: hsl(142, 76%, 55%);
+  --buildiofy-accent: hsl(270, 91%, 65%);
   --buildiofy-gray: hsl(0, 0%, 60%);
 }
 
@@ -48,11 +48,11 @@
   --primary-foreground: hsl(0, 0%, 95%);
   --secondary: hsl(220, 15%, 12%);
   --secondary-foreground: hsl(0, 0%, 95%);
-  --accent: hsl(142, 76%, 55%);
-  --accent-foreground: hsl(220, 15%, 8%);
+  --accent: hsl(270, 91%, 65%);
+  --accent-foreground: hsl(0, 0%, 95%);
   --destructive: hsl(0, 70%, 55%);
   --destructive-foreground: hsl(0, 0%, 95%);
-  --ring: hsl(142, 76%, 55%);
+  --ring: hsl(270, 91%, 65%);
 }
 
 @layer base {

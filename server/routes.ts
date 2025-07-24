@@ -66,7 +66,7 @@ const sendContactNotification = async (data: any) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // Send to yourself
-      subject: `New Contact Form Submission - ${data.name}`,
+      subject: "Buildiofy Query Submission",
       text: emailContent,
       replyTo: data.email
     });

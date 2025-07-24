@@ -21,7 +21,9 @@ Preferred communication style: Simple, everyday language.
 - **Contact page redesign**: Unified right side cards to match height with query form for better visual balance
 - **Brand logo integration**: Added custom Buildiofy logo with purple gradient and green building blocks to navbar and footer
 - **Blog content**: Updated articles to focus on admin dashboard design trends and best practices
-- **Color scheme**: Switched to dark theme with green accent (#4ade80) for professional admin interface look
+- **Color scheme**: Updated to dark theme with purple accent (hsl(270, 91%, 65%)) for cohesive professional branding
+- **Email notifications**: Implemented Nodemailer with Gmail SMTP for contact form submissions - sends detailed notifications to business email
+- **Contact form functionality**: Full working contact form with email notifications, form validation, and professional email templates
 
 ## System Architecture
 

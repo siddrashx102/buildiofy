@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -15,26 +16,88 @@ const contactSchema = z.object({
   newsletter: z.boolean().default(false),
 });
 
+// Email configuration
+const createTransporter = () => {
+  // Check if email credentials are available
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.warn("Email credentials not configured. Contact form will only log to console.");
+    return null;
+  }
+
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS // App password for Gmail
+    }
+  });
+};
+
+const sendContactNotification = async (data: any) => {
+  const transporter = createTransporter();
+  
+  if (!transporter) {
+    console.log("Email not configured, skipping email notification");
+    return false;
+  }
+
+  const emailContent = `
+    New Contact Form Submission from Buildiofy Website
+    
+    Name: ${data.name}
+    Email: ${data.email}
+    Company: ${data.company || 'Not provided'}
+    Phone: ${data.phone || 'Not provided'}
+    
+    Project Details:
+    ${data.project}
+    
+    Budget: ${data.budget || 'Not specified'}
+    Timeline: ${data.timeline || 'Not specified'}
+    
+    Services Interested In: ${data.services.length > 0 ? data.services.join(', ') : 'None specified'}
+    How they heard about us: ${data.hearAbout || 'Not specified'}
+    Newsletter subscription: ${data.newsletter ? 'Yes' : 'No'}
+    
+    Please respond to this inquiry promptly.
+  `;
+
+  try {
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Send to yourself
+      subject: `New Contact Form Submission - ${data.name}`,
+      text: emailContent,
+      replyTo: data.email
+    });
+    
+    console.log("Contact notification email sent successfully");
+    return true;
+  } catch (error) {
+    console.error("Failed to send email notification:", error);
+    return false;
+  }
+};
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = contactSchema.parse(req.body);
       
-      // In a real application, you would:
-      // 1. Send email notification to the agency
-      // 2. Save the contact form submission to a database
-      // 3. Send a confirmation email to the user
-      // 4. Integrate with CRM systems
-      
       console.log("Contact form submission:", validatedData);
+      
+      // Send email notification
+      const emailSent = await sendContactNotification(validatedData);
       
       // Simulate processing time
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       res.json({ 
         success: true, 
-        message: "Contact form submitted successfully" 
+        message: emailSent 
+          ? "Contact form submitted successfully! We'll get back to you soon." 
+          : "Contact form submitted successfully! (Email notification pending configuration)"
       });
     } catch (error) {
       if (error instanceof z.ZodError) {

@@ -94,22 +94,24 @@ export function Contact() {
           </p>
         </motion.div>
         
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto lg:items-stretch">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20">
-              <CardContent className="p-8">
+            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20 h-full">
+              <CardContent className="p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">Name *</label>
+                <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+                  <div className="space-y-6 flex-1">
+                    {/* Personal Information */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium mb-2">Name *</label>
                       <Input
                         id="name"
                         type="text"
@@ -256,22 +258,23 @@ export function Contact() {
                     </Select>
                   </div>
 
-                  {/* Newsletter Subscription */}
-                  <div className="flex items-center space-x-3">
-                    <Checkbox
-                      id="newsletter"
-                      checked={formData.newsletter}
-                      onCheckedChange={(checked) => handleInputChange('newsletter', !!checked)}
-                      className="border-white/20 data-[state=checked]:bg-accent data-[state=checked]:border-accent"
-                    />
-                    <label htmlFor="newsletter" className="text-sm text-gray-300 cursor-pointer">
-                      Subscribe to our newsletter for development tips and updates
-                    </label>
+                    {/* Newsletter Subscription */}
+                    <div className="flex items-center space-x-3">
+                      <Checkbox
+                        id="newsletter"
+                        checked={formData.newsletter}
+                        onCheckedChange={(checked) => handleInputChange('newsletter', !!checked)}
+                        className="border-white/20 data-[state=checked]:bg-accent data-[state=checked]:border-accent"
+                      />
+                      <label htmlFor="newsletter" className="text-sm text-gray-300 cursor-pointer">
+                        Subscribe to our newsletter for development tips and updates
+                      </label>
+                    </div>
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                    className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 mt-6"
                   >
                     <Send size={20} />
                     Send Message
@@ -283,150 +286,155 @@ export function Contact() {
           
           {/* Contact Information & Details */}
           <motion.div 
-            className="space-y-8"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            {/* Contact Information */}
-            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-                
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start space-x-4">
-                    <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <p className="font-medium">Email</p>
-                      <p className="text-gray-300">hello@buildiofy.com</p>
-                      <p className="text-sm text-gray-400">We respond within 24 hours</p>
+            {/* Single unified card that matches form height */}
+            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20 h-full">
+              <CardContent className="p-8 h-full flex flex-col">
+                {/* Contact Information Section */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-start space-x-4">
+                      <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-medium">Email</p>
+                        <p className="text-gray-300">hello@buildiofy.com</p>
+                        <p className="text-sm text-gray-400">We respond within 24 hours</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-4">
+                      <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-medium">Phone</p>
+                        <p className="text-gray-300">+1 (555) 123-4567</p>
+                        <p className="text-sm text-gray-400">Mon-Fri, 9AM-6PM EST</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-medium">Location</p>
+                        <p className="text-gray-300">Remote-First Agency</p>
+                        <p className="text-sm text-gray-400">Serving clients worldwide</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-4">
+                      <Clock className="text-accent mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <p className="font-medium">Response Time</p>
+                        <p className="text-gray-300">Under 24 hours</p>
+                        <p className="text-sm text-gray-400">Usually much faster</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <p className="font-medium">Phone</p>
-                      <p className="text-gray-300">+1 (555) 123-4567</p>
-                      <p className="text-sm text-gray-400">Mon-Fri, 9AM-6PM EST</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <p className="font-medium">Location</p>
-                      <p className="text-gray-300">Remote-First Agency</p>
-                      <p className="text-sm text-gray-400">Serving clients worldwide</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <Clock className="text-accent mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <p className="font-medium">Response Time</p>
-                      <p className="text-gray-300">Under 24 hours</p>
-                      <p className="text-sm text-gray-400">Usually much faster</p>
+                  {/* Social Links */}
+                  <div>
+                    <h4 className="font-semibold mb-4">Follow Us</h4>
+                    <div className="flex space-x-3">
+                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
+                        <Github size={18} className="group-hover:scale-110 transition-transform" />
+                      </a>
+                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
+                        <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
+                      </a>
+                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
+                        <Twitter size={18} className="group-hover:scale-110 transition-transform" />
+                      </a>
+                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
+                        <MessageCircle size={18} className="group-hover:scale-110 transition-transform" />
+                      </a>
                     </div>
                   </div>
                 </div>
-                
-                {/* Social Links */}
-                <div>
-                  <h4 className="font-semibold mb-4">Follow Us</h4>
-                  <div className="flex space-x-4">
-                    <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                      <Github size={20} className="group-hover:scale-110 transition-transform" />
-                    </a>
-                    <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                      <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
-                    </a>
-                    <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                      <Twitter size={20} className="group-hover:scale-110 transition-transform" />
-                    </a>
-                    <a href="#" className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                      <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* Why Choose Us */}
-            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Why Work With Us?</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-medium">Expert Team</p>
-                      <p className="text-sm text-gray-300">Full-stack developers with 5+ years experience</p>
-                    </div>
-                  </div>
+                {/* Divider */}
+                <div className="border-t border-white/10 my-6"></div>
+
+                {/* Why Choose Us Section */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold mb-6">Why Work With Us?</h3>
                   
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-medium">Modern Stack</p>
-                      <p className="text-sm text-gray-300">Latest React, Node.js, TypeScript technologies</p>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="font-medium">Expert Team</p>
+                        <p className="text-sm text-gray-300">Full-stack developers with 5+ years experience</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-medium">Agile Process</p>
-                      <p className="text-sm text-gray-300">Regular updates and transparent communication</p>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="font-medium">Modern Stack</p>
+                        <p className="text-sm text-gray-300">Latest React, Node.js, TypeScript technologies</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="font-medium">Post-Launch Support</p>
-                      <p className="text-sm text-gray-300">Ongoing maintenance and feature updates</p>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="font-medium">Agile Process</p>
+                        <p className="text-sm text-gray-300">Regular updates and transparent communication</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="font-medium">Post-Launch Support</p>
+                        <p className="text-sm text-gray-300">Ongoing maintenance and feature updates</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
 
-            {/* Next Steps */}
-            <Card className="glassmorphism bg-white/10 backdrop-blur-lg border-white/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">What Happens Next?</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      1
-                    </div>
-                    <div>
-                      <p className="font-medium">Initial Consultation</p>
-                      <p className="text-sm text-gray-300">We'll discuss your project requirements and goals</p>
-                    </div>
-                  </div>
+                {/* Divider */}
+                <div className="border-t border-white/10 my-6"></div>
+
+                {/* Next Steps Section */}
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-6">What Happens Next?</h3>
                   
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      2
+                  <div className="space-y-5">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        1
+                      </div>
+                      <div>
+                        <p className="font-medium">Initial Consultation</p>
+                        <p className="text-sm text-gray-300">We'll discuss your project requirements and goals</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-medium">Custom Proposal</p>
-                      <p className="text-sm text-gray-300">Detailed timeline, technology stack, and pricing</p>
+                    
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        2
+                      </div>
+                      <div>
+                        <p className="font-medium">Custom Proposal</p>
+                        <p className="text-sm text-gray-300">Detailed timeline, technology stack, and pricing</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                      3
-                    </div>
-                    <div>
-                      <p className="font-medium">Development Kickoff</p>
-                      <p className="text-sm text-gray-300">Project starts with regular progress updates</p>
+                    
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                        3
+                      </div>
+                      <div>
+                        <p className="font-medium">Development Kickoff</p>
+                        <p className="text-sm text-gray-300">Project starts with regular progress updates</p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -58,12 +58,6 @@ export function Navigation() {
               Templates
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')} 
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-            >
-              About
-            </button>
-            <button 
               onClick={() => scrollToSection('blog')} 
               className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
             >
@@ -121,12 +115,6 @@ export function Navigation() {
                 className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
               >
                 Templates
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')} 
-                className="text-muted-foreground hover:text-foreground transition-colors text-left text-sm font-medium"
-              >
-                About
               </button>
               <button 
                 onClick={() => scrollToSection('blog')} 

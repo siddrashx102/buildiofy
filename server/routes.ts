@@ -42,7 +42,7 @@ const sendContactNotification = async (data: any) => {
   }
 
   const emailContent = `
-    New Contact Form Submission from Buildiofy Website
+    Buildiofy Query Submission:
     
     Name: ${data.name}
     Email: ${data.email}

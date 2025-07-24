@@ -9,11 +9,21 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <img 
-                src={buildiofy_logo} 
-                alt="Buildiofy Logo" 
-                className="h-10 w-auto"
-              />
+              <div className="flex items-center space-x-3">
+                {/* Logo Icon */}
+                <div className="w-10 h-10 rounded-md border-2 border-accent flex items-center justify-center bg-accent/10">
+                  <div className="grid grid-cols-2 gap-0.5">
+                    <div className="w-2 h-2 bg-green-400 rounded-sm"></div>
+                    <div className="w-2 h-2 bg-green-400/50 rounded-sm"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-sm"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-sm"></div>
+                  </div>
+                </div>
+                {/* Logo Text */}
+                <span className="text-2xl font-semibold text-white">
+                  <span className="text-accent">build</span><span className="text-gray-300">iofy</span>
+                </span>
+              </div>
             </div>
             <p className="text-gray-400 mb-4">
               Scalable JavaScript solutions for startups and enterprises. We build the future, one line of code at a time.

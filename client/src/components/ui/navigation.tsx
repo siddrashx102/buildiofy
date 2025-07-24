@@ -32,11 +32,21 @@ export function Navigation() {
             onClick={() => scrollToSection('home')} 
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
-            <img 
-              src={buildiofy_logo} 
-              alt="Buildiofy Logo" 
-              className="h-8 w-auto"
-            />
+            <div className="flex items-center space-x-2">
+              {/* Logo Icon */}
+              <div className="w-8 h-8 rounded-md border-2 border-accent flex items-center justify-center bg-accent/10">
+                <div className="grid grid-cols-2 gap-0.5">
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400/50 rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-sm"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-sm"></div>
+                </div>
+              </div>
+              {/* Logo Text */}
+              <span className="text-xl font-semibold text-foreground">
+                <span className="text-accent">build</span><span className="text-muted-foreground">iofy</span>
+              </span>
+            </div>
           </button>
           
           {/* Desktop Navigation */}

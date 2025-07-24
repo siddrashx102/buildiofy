@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export function Blog() {
   const blogPosts = [
@@ -75,9 +76,11 @@ export function Blog() {
                     <Clock size={14} className="mr-1" />
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-lg font-medium text-foreground mb-3 hover:text-accent transition-colors cursor-pointer">
-                    {post.title}
-                  </h3>
+                  <Link href={`/blog/${post.id}`}>
+                    <h3 className="text-lg font-medium text-foreground mb-3 hover:text-accent transition-colors cursor-pointer">
+                      {post.title}
+                    </h3>
+                  </Link>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                     {post.excerpt}
                   </p>
@@ -88,10 +91,10 @@ export function Blog() {
                       </span>
                     ))}
                   </div>
-                  <button className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
+                  <Link href={`/blog/${post.id}`} className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
                     Read More 
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={14} />
-                  </button>
+                  </Link>
                 </CardContent>
               </Card>
             </motion.article>
@@ -105,9 +108,11 @@ export function Blog() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md font-medium transition-colors">
-            View All Posts
-          </Button>
+          <Link href="/blog">
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md font-medium transition-colors">
+              View All Posts
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

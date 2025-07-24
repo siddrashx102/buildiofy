@@ -1,4 +1,5 @@
 import { Code, Github, Linkedin, Twitter } from "lucide-react";
+import buildiofy_logo from "@assets/buildiofy-logo_1753375411520.png";
 
 export function Footer() {
   return (
@@ -7,11 +8,12 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                <Code className="text-white" size={16} />
-              </div>
-              <span className="text-xl font-bold text-white">Buildiofy</span>
+            <div className="mb-4">
+              <img 
+                src={buildiofy_logo} 
+                alt="Buildiofy Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Scalable JavaScript solutions for startups and enterprises. We build the future, one line of code at a time.

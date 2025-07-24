@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import buildiofy_logo from "@assets/buildiofy-logo_1753375411520.png";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,10 +32,11 @@ export function Navigation() {
             onClick={() => scrollToSection('home')} 
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
-            <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center">
-              <Code className="text-accent-foreground" size={16} />
-            </div>
-            <span className="text-xl font-medium text-foreground">Buildiofy</span>
+            <img 
+              src={buildiofy_logo} 
+              alt="Buildiofy Logo" 
+              className="h-8 w-auto"
+            />
           </button>
           
           {/* Desktop Navigation */}

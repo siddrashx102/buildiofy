@@ -11,12 +11,15 @@ export function Footer() {
             <div className="mb-4">
               <div className="flex items-center space-x-3">
                 {/* Logo Icon */}
-                <div className="w-10 h-10 rounded-md border-2 border-accent flex items-center justify-center bg-accent/10">
-                  <div className="grid grid-cols-2 gap-0.5">
-                    <div className="w-2 h-2 bg-accent rounded-sm"></div>
-                    <div className="w-2 h-2 bg-accent/70 rounded-sm"></div>
-                    <div className="w-2 h-2 bg-accent rounded-sm"></div>
-                    <div className="w-2 h-2 bg-accent rounded-sm"></div>
+                <div className="w-10 h-10 rounded-md bg-accent flex items-center justify-center relative">
+                  <div className="absolute left-2.5 top-1/2 transform -translate-y-1/2">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <div className="absolute right-2.5 top-2.5">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <div className="absolute right-2.5 bottom-2.5">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
                 {/* Logo Text */}

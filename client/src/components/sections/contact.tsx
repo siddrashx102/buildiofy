@@ -158,7 +158,7 @@ export function Contact() {
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-accent text-white placeholder-gray-300"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 8445468881"
                       />
                     </div>
                   </div>
@@ -304,7 +304,7 @@ export function Contact() {
                       <Mail className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-gray-300">hello@buildiofy.com</p>
+                        <p className="text-gray-300">support@buildiofy.com</p>
                         <p className="text-sm text-gray-400">We respond within 24 hours</p>
                       </div>
                     </div>
@@ -313,8 +313,7 @@ export function Contact() {
                       <Phone className="text-accent mt-1 flex-shrink-0" size={20} />
                       <div>
                         <p className="font-medium">Phone</p>
-                        <p className="text-gray-300">+1 (555) 123-4567</p>
-                        <p className="text-sm text-gray-400">Mon-Fri, 9AM-6PM EST</p>
+                        <p className="text-gray-300">+91 8445468881</p>
                       </div>
                     </div>
                     
@@ -337,24 +336,7 @@ export function Contact() {
                     </div>
                   </div>
                   
-                  {/* Social Links */}
-                  <div>
-                    <h4 className="font-semibold mb-4">Follow Us</h4>
-                    <div className="flex space-x-3">
-                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                        <Github size={18} className="group-hover:scale-110 transition-transform" />
-                      </a>
-                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                        <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
-                      </a>
-                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                        <Twitter size={18} className="group-hover:scale-110 transition-transform" />
-                      </a>
-                      <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-accent transition-colors group">
-                        <MessageCircle size={18} className="group-hover:scale-110 transition-transform" />
-                      </a>
-                    </div>
-                  </div>
+
                 </div>
 
                 {/* Divider */}

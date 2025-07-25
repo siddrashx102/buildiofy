@@ -1,4 +1,5 @@
 import { Code, Github, Linkedin, Twitter } from "lucide-react";
+import { Link } from "wouter";
 import buildiofy_logo from "@assets/buildiofy-logo_1753375411520.png";
 
 export function Footer() {
@@ -70,9 +71,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li>hello@buildiofy.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>San Francisco, CA</li>
+              <li>support@buildiofy.com</li>
+              <li>+91 8445468881</li>
+              <li>Greater Noida (West), UP, India (201306)</li>
               <li>24/7 Support</li>
             </ul>
           </div>
@@ -80,12 +81,12 @@ export function Footer() {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            © 2024 Buildiofy. All rights reserved.
+            © 2025 Buildiofy. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-accent transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-accent transition-colors">Cookie Policy</a>
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-gray-400 hover:text-accent transition-colors">Terms of Service</Link>
+            <Link href="/cookie-policy" className="text-gray-400 hover:text-accent transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

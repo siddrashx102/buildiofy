@@ -87,16 +87,16 @@ export function Navigation() {
           </div>
           
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4 text-sm">
-            <div className="flex items-center space-x-1 text-muted-foreground">
-              <Mail size={14} />
-              <a href="mailto:support@buildiofy.com" className="hover:text-accent transition-colors">
+          <div className="hidden lg:flex items-center space-x-6 text-sm">
+            <div className="flex items-center space-x-2 bg-accent/10 px-3 py-2 rounded-md">
+              <Mail size={16} className="text-accent" />
+              <a href="mailto:support@buildiofy.com" className="text-foreground font-medium hover:text-accent transition-colors">
                 support@buildiofy.com
               </a>
             </div>
-            <div className="flex items-center space-x-1 text-muted-foreground">
-              <Phone size={14} />
-              <a href="tel:+918445468881" className="hover:text-accent transition-colors">
+            <div className="flex items-center space-x-2 bg-accent/10 px-3 py-2 rounded-md">
+              <Phone size={16} className="text-accent" />
+              <a href="tel:+918445468881" className="text-foreground font-medium hover:text-accent transition-colors">
                 +91 8445468881
               </a>
             </div>

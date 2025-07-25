@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Rocket } from "lucide-react";
+import { Shield, Clock, Rocket, Mail, Phone } from "lucide-react";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -82,6 +82,35 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <Rocket className="text-accent" size={16} />
               <span>Highly Customizable</span>
+            </div>
+          </motion.div>
+          
+          {/* Contact Information */}
+          <motion.div 
+            className="mt-12 pt-8 border-t border-gray-700"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+          >
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-gray-300">
+              <div className="flex items-center gap-3 bg-gray-800/50 px-4 py-3 rounded-lg backdrop-blur-sm">
+                <Mail className="text-accent" size={18} />
+                <a 
+                  href="mailto:support@buildiofy.com" 
+                  className="text-white font-medium hover:text-accent transition-colors"
+                >
+                  support@buildiofy.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3 bg-gray-800/50 px-4 py-3 rounded-lg backdrop-blur-sm">
+                <Phone className="text-accent" size={18} />
+                <a 
+                  href="tel:+918445468881" 
+                  className="text-white font-medium hover:text-accent transition-colors"
+                >
+                  +91 8445468881
+                </a>
+              </div>
             </div>
           </motion.div>
         </motion.div>

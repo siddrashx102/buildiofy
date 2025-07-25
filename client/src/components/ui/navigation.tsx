@@ -86,21 +86,6 @@ export function Navigation() {
             </button>
           </div>
           
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-6 text-sm">
-            <div className="flex items-center space-x-2 bg-accent/10 px-3 py-2 rounded-md">
-              <Mail size={16} className="text-accent" />
-              <a href="mailto:support@buildiofy.com" className="text-foreground font-medium hover:text-accent transition-colors">
-                support@buildiofy.com
-              </a>
-            </div>
-            <div className="flex items-center space-x-2 bg-accent/10 px-3 py-2 rounded-md">
-              <Phone size={16} className="text-accent" />
-              <a href="tel:+918445468881" className="text-foreground font-medium hover:text-accent transition-colors">
-                +91 8445468881
-              </a>
-            </div>
-          </div>
           
           {/* CTA Button */}
           <div className="hidden md:block">

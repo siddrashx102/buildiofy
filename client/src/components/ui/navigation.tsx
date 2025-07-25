@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X, Code } from "lucide-react";
+import { Menu, X, Code, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import buildiofy_logo from "@assets/buildiofy-logo_1753375411520.png";
 
@@ -84,6 +84,22 @@ export function Navigation() {
             >
               Contact
             </button>
+          </div>
+          
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm">
+            <div className="flex items-center space-x-1 text-muted-foreground">
+              <Mail size={14} />
+              <a href="mailto:support@buildiofy.com" className="hover:text-accent transition-colors">
+                support@buildiofy.com
+              </a>
+            </div>
+            <div className="flex items-center space-x-1 text-muted-foreground">
+              <Phone size={14} />
+              <a href="tel:+918445468881" className="hover:text-accent transition-colors">
+                +91 8445468881
+              </a>
+            </div>
           </div>
           
           {/* CTA Button */}

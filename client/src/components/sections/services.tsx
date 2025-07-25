@@ -106,10 +106,7 @@ export function Services() {
                       </li>
                     ))}
                   </ul>
-                  <button className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
-                    Learn More
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={14} />
-                  </button>
+
                 </CardContent>
               </Card>
             </motion.div>

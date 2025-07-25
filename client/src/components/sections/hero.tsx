@@ -60,7 +60,7 @@ export function Hero() {
               variant="outline"
               className="border border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3 rounded-md font-medium text-base transition-all duration-200 bg-transparent"
             >
-              Get Started
+              Get Quote
             </Button>
           </motion.div>
           

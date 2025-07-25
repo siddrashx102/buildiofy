@@ -92,7 +92,7 @@ export function Navigation() {
               onClick={() => scrollToSection('contact')}
               className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded-md font-medium text-sm transition-colors"
             >
-              Get Started
+              Get Quote
             </Button>
           </div>
           
@@ -147,7 +147,7 @@ export function Navigation() {
                 onClick={() => scrollToSection('contact')}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-3 rounded-md font-medium w-full mt-2"
               >
-                Get Started
+                Get Quote
               </Button>
             </div>
           </div>

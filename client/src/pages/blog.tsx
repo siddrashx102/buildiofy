@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ContactBar } from "@/components/sections/contact-bar";
 
 const blogPosts = [
   {
@@ -63,6 +64,7 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
+      <ContactBar />
       {/* Header */}
       <header className="bg-background/95 backdrop-blur-md border-b border-border py-4">
         <div className="container mx-auto px-4">

@@ -1,9 +1,11 @@
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import { ContactBar } from "@/components/sections/contact-bar";
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-background">
+      <ContactBar />
       {/* Header */}
       <header className="bg-background/95 backdrop-blur-md border-b border-border py-4">
         <div className="container mx-auto px-4">

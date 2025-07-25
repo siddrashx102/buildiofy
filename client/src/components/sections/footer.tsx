@@ -56,14 +56,15 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Resources */}
+          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Resources</h4>
+            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-accent transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Tech Stack</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Documentation</a></li>
+              <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
+              <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
+              <li><a href="#portfolio" className="hover:text-accent transition-colors">Portfolio</a></li>
+              <li><Link href="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
+              <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
             </ul>
           </div>
           

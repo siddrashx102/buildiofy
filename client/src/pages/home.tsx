@@ -1,3 +1,4 @@
+import { ContactBar } from "@/components/sections/contact-bar";
 import { Navigation } from "@/components/ui/navigation";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
@@ -9,6 +10,7 @@ import { Footer } from "@/components/sections/footer";
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <ContactBar />
       <Navigation />
       <Hero />
       <Services />

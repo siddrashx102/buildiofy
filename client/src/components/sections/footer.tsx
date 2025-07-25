@@ -30,7 +30,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-4">
-              Scalable JavaScript solutions for startups and enterprises. We build the future, one line of code at a time.
+              Scalable web solutions for startups and enterprises. We build the future, one line of code at a time.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors">

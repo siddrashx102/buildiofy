@@ -5,32 +5,60 @@ import { ArrowRight, Check } from "lucide-react";
 export function Services() {
   const services = [
     {
-      icon: "📊",
-      title: "Admin Dashboard Templates",
-      description: "Modern, responsive admin dashboards with complete user management, analytics, and data visualization components.",
-      features: ["User Management", "Data Visualization", "Responsive Design"],
+      icon: "🎨",
+      title: "Custom Web Design",
+      description: "Bespoke website designs tailored to your brand identity with modern aesthetics and user-centric approach.",
+      features: ["Brand Identity Design", "UI/UX Design", "Responsive Layouts"],
       gradient: "from-blue-500 to-purple-600"
     },
     {
-      icon: "🎨",
-      title: "E-commerce Admin Panels",
-      description: "Comprehensive e-commerce management systems with inventory, orders, payments, and customer management features.",
-      features: ["Order Management", "Inventory Tracking", "Payment Integration"],
-      gradient: "from-green-500 to-teal-600"
-    },
-    {
-      icon: "📈",
-      title: "Analytics Dashboards",
-      description: "Professional analytics and reporting templates with charts, metrics, and data export capabilities.",
-      features: ["Real-time Charts", "Export Reports", "Custom Metrics"],
+      icon: "⚡",
+      title: "Premium Web Templates",
+      description: "High-quality, production-ready website templates for various industries with modern design trends.",
+      features: ["HTML/CSS Templates", "React Components", "WordPress Themes"],
       gradient: "from-purple-500 to-pink-600"
     },
     {
-      icon: "⚡",
-      title: "SaaS Admin Templates",
-      description: "Complete SaaS platform templates with subscription management, billing, and multi-tenant architecture.",
-      features: ["Subscription Billing", "Multi-tenant Support", "API Integration"],
+      icon: "🚀",
+      title: "Web Development",
+      description: "Full-stack web development services using cutting-edge technologies for optimal performance.",
+      features: ["Frontend Development", "Backend Solutions", "API Integration"],
+      gradient: "from-green-500 to-teal-600"
+    },
+    {
+      icon: "📱",
+      title: "Mobile-First Design",
+      description: "Responsive designs optimized for all devices with mobile-first approach and cross-browser compatibility.",
+      features: ["Responsive Design", "Mobile Optimization", "PWA Development"],
       gradient: "from-orange-500 to-red-600"
+    },
+    {
+      icon: "🛒",
+      title: "E-commerce Solutions",
+      description: "Complete e-commerce platforms with secure payment processing and inventory management systems.",
+      features: ["Online Store Setup", "Payment Integration", "Inventory Management"],
+      gradient: "from-indigo-500 to-blue-600"
+    },
+    {
+      icon: "📊",
+      title: "SEO & Analytics",
+      description: "Search engine optimization and analytics implementation to boost your online visibility and track performance.",
+      features: ["SEO Optimization", "Google Analytics", "Performance Tracking"],
+      gradient: "from-emerald-500 to-green-600"
+    },
+    {
+      icon: "🎯",
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing strategies including social media, content marketing, and paid advertising.",
+      features: ["Social Media Marketing", "Content Strategy", "PPC Campaigns"],
+      gradient: "from-rose-500 to-pink-600"
+    },
+    {
+      icon: "🔧",
+      title: "Maintenance & Support",
+      description: "Ongoing website maintenance, security updates, and technical support to keep your site running smoothly.",
+      features: ["Regular Updates", "Security Monitoring", "24/7 Support"],
+      gradient: "from-cyan-500 to-blue-600"
     }
   ];
 
@@ -45,14 +73,14 @@ export function Services() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-            Premium <span className="text-accent font-medium">Admin Templates</span>
+            Our <span className="text-accent font-medium">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light">
-            Production-ready dashboard templates designed for modern web applications. Built with the latest technologies and best practices.
+            Comprehensive web design and development solutions to elevate your digital presence. From custom designs to premium templates, we deliver exceptional results.
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -79,7 +107,7 @@ export function Services() {
                     ))}
                   </ul>
                   <button className="text-accent font-medium hover:text-accent/80 flex items-center group text-sm">
-                    View Template
+                    Learn More
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={14} />
                   </button>
                 </CardContent>

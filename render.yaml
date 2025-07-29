@@ -2,9 +2,12 @@ services:
   - type: web
     name: buildiofy-website
     env: node
-    buildCommand: npm install && npm run build
+    region: oregon
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     plan: free
+    autoDeploy: true
+    healthCheckPath: /
     envVars:
       - key: NODE_ENV
         value: production

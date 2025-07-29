@@ -3,7 +3,7 @@ services:
     name: buildiofy-website
     env: node
     region: oregon
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
     plan: free
     autoDeploy: true

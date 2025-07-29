@@ -7,10 +7,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Clock, Github, Linkedin, Twitter, Send, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, Clock, Github, Linkedin, Twitter, Send, MapPin, MessageCircle, Loader2 } from "lucide-react";
 
 export function Contact() {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,6 +27,7 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     
     try {
       const response = await fetch('/api/contact', {
@@ -36,10 +38,12 @@ export function Contact() {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         toast({
           title: "Message sent successfully!",
-          description: "We'll get back to you within 24 hours.",
+          description: result.message || "We'll get back to you within 24 hours.",
         });
         setFormData({ 
           name: "", 
@@ -54,7 +58,7 @@ export function Contact() {
           newsletter: false
         });
       } else {
-        throw new Error('Failed to send message');
+        throw new Error(result.message || 'Failed to send message');
       }
     } catch (error) {
       toast({
@@ -62,6 +66,8 @@ export function Contact() {
         description: "Please try again or contact us directly.",
         variant: "destructive",
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -274,10 +280,20 @@ export function Contact() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 mt-6"
+                    disabled={isLoading}
+                    className="w-full bg-accent hover:bg-accent/90 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 mt-6"
                   >
-                    <Send size={20} />
-                    Send Message
+                    {isLoading ? (
+                      <>
+                        <Loader2 size={20} className="animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={20} />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>

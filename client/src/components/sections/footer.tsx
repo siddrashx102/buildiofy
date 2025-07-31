@@ -60,10 +60,17 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
+              <li>
+                <button 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="hover:text-accent transition-colors text-left"
+                >
+                  Home
+                </button>
+              </li>
               <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-accent transition-colors">Portfolio</a></li>
-              <li><Link href="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
+              <li><a href="#portfolio" className="hover:text-accent transition-colors">Templates</a></li>
+              <li><a href="#blog" className="hover:text-accent transition-colors">Blog</a></li>
               <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
             </ul>
           </div>

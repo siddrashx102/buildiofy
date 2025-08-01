@@ -96,7 +96,7 @@ export function Contact() {
         >
           <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Build Something Amazing?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Let's discuss your project and see how we can help you achieve your goals with scalable JavaScript solutions
+            Let's discuss your project and see how we can help you achieve your goals with scalable web solutions
           </p>
         </motion.div>
         
